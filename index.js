@@ -23,6 +23,7 @@ async function run() {
     const usersCollection = database.collection("users");
     // read
     app.get('/users', async(req, res)=>{
+      // read operation
       const cursor = usersCollection.find();
       const result = await cursor.toArray();
       res.send(result);
